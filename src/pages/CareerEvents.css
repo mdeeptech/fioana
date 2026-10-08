@@ -1,0 +1,192 @@
+.career-events-page {
+  --ce-wine: #2A0718;
+  --ce-ivory: #F8F3EA;
+  --ce-gold: #D4AF62;
+  --ce-ink: #241A1D;
+  --ce-muted: #756C68;
+  overflow: clip;
+  color: var(--ce-ink);
+  background: var(--ce-ivory);
+}
+.ce-wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+.ce-eyebrow { margin: 0; color: #9A7539; font: 600 9px/1.5 Inter, sans-serif; letter-spacing: .2em; }
+.ce-hero { position: relative; display: flex; min-height: min(820px, 91svh); min-height: min(820px, 91vh); align-items: center; overflow: hidden; isolation: isolate; color: var(--ce-ivory); background: #1b1114; }
+.ce-hero-image, .ce-hero-shade { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; }
+.ce-hero-image { object-fit: cover; object-position: center 48%; }
+.ce-hero-shade { background: linear-gradient(90deg, rgba(26,8,16,.91) 0%, rgba(35,9,20,.78) 38%, rgba(32,12,20,.29) 72%, rgba(23,9,14,.12) 100%), linear-gradient(0deg, rgba(24,8,14,.48), transparent 50%); }
+.ce-hero-copy { width: min(1320px, calc(100% - 64px)); margin: 70px auto 0; padding: 78px 0 70px; }
+.ce-hero-eyebrow { display: flex; align-items: center; gap: 13px; margin-bottom: clamp(24px, 4vh, 44px); color: var(--ce-gold); }
+.ce-hero-eyebrow span { width: 38px; height: 1px; background: var(--ce-gold); }
+.ce-hero-title { display: flex; flex-direction: column; margin: 0; color: var(--ce-ivory); font: 400 clamp(78px, 11.5vw, 158px)/.76 "Cormorant Garamond", Georgia, serif; letter-spacing: -.055em; }
+.ce-hero-title span { display: block; width: fit-content; }
+.ce-hero-title span:last-child { margin: .13em 0 0 .58em; color: var(--ce-gold); }
+.ce-hero-deck { margin: 37px 0 0; color: var(--ce-ivory); font: 400 clamp(22px, 2.5vw, 34px)/1.18 "Cormorant Garamond", Georgia, serif; }
+.ce-hero-description { max-width: 430px; margin: 13px 0 23px; color: rgba(248,243,234,.73); font: 400 12px/1.8 Inter, sans-serif; }
+.ce-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 13px; padding: 0 20px; font: 600 9px/1.2 Inter, sans-serif; letter-spacing: .12em; text-decoration: none; transition: color .25s ease, background-color .25s ease, border-color .25s ease, transform .25s ease; }
+.ce-button:focus-visible, .ce-text-link:focus-visible, .ce-scroll-cue:focus-visible { outline: 2px solid var(--ce-gold); outline-offset: 4px; }
+.ce-button:hover { transform: translateY(-2px); }
+.ce-button--light { border: 1px solid rgba(248,243,234,.67); color: var(--ce-ivory); }
+.ce-button--light:hover { border-color: var(--ce-gold); background: rgba(212,175,98,.12); }
+.ce-locations { display: flex; align-items: center; gap: 12px; margin: 31px 0 0; color: rgba(248,243,234,.62); font: 500 8px/1.5 Inter, sans-serif; letter-spacing: .18em; }
+.ce-locations i { display: block; width: 3px; height: 3px; border-radius: 50%; background: var(--ce-gold); }
+.ce-scroll-cue { position: absolute; right: max(32px, calc((100vw - 1320px)/2)); bottom: 35px; display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(212,175,98,.55); border-radius: 50%; color: var(--ce-gold); }
+.ce-hero-index { position: absolute; right: max(88px, calc((100vw - 1210px)/2)); bottom: 48px; color: rgba(248,243,234,.58); font: 500 8px/1.5 Inter, sans-serif; letter-spacing: .15em; }
+
+.ce-intro { display: grid; grid-template-columns: 1fr 1px 1fr; align-items: center; gap: clamp(38px, 8vw, 120px); padding-block: clamp(82px, 11vw, 144px); }
+.ce-intro-heading .ce-eyebrow { margin-bottom: 21px; }
+.ce-intro-heading h2 { margin: 0; color: var(--ce-wine); font: 400 clamp(47px, 6.1vw, 82px)/.83 "Cormorant Garamond", Georgia, serif; letter-spacing: -.035em; }
+.ce-intro-line { display: block; }
+.ce-intro-heading h2 em, .ce-feature-copy h2 em, .ce-events-heading h2 em, .ce-career-heading h2 em, .ce-cta h2 em { color: #9A7539; font-weight: 400; }
+.ce-intro-rule { width: 1px; height: 170px; background: var(--ce-gold); transform-origin: top; }
+.ce-intro-copy { position: relative; max-width: 460px; padding-top: 45px; }
+.ce-mark { position: absolute; top: -11px; left: 0; color: rgba(212,175,98,.23); font: 400 86px/.8 "Cormorant Garamond", Georgia, serif; }
+.ce-intro-copy > p { position: relative; margin: 0; color: #5e5550; font: 400 15px/1.9 Inter, sans-serif; }
+.ce-intro-caption { display: block; margin-top: 25px; color: #9A7539; font: 600 8px/1.6 Inter, sans-serif; letter-spacing: .14em; }
+
+.ce-feature { display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(48px, 9vw, 128px); align-items: center; padding-bottom: clamp(92px, 12vw, 158px); }
+.ce-feature-photo { position: relative; aspect-ratio: 1.05 / 1; overflow: hidden; border: 1px solid rgba(154,117,57,.45); padding: 8px; }
+.ce-feature-photo::after { position: absolute; inset: 8px; content: ''; border: 1px solid rgba(248,243,234,.35); pointer-events: none; }
+.ce-feature-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.ce-photo-index { position: absolute; z-index: 1; right: 21px; bottom: 20px; color: #fff; font: 500 8px/1.4 Inter, sans-serif; letter-spacing: .17em; text-shadow: 0 1px 9px #000; }
+.ce-feature-copy { position: relative; padding: 22px 0; }
+.ce-feature-copy .ce-eyebrow { margin-bottom: 22px; }
+.ce-feature-copy h2 { position: relative; z-index: 1; margin: 0; color: var(--ce-wine); font: 400 clamp(47px, 5.4vw, 72px)/.86 "Cormorant Garamond", Georgia, serif; letter-spacing: -.04em; }
+.ce-feature-copy h2 em { display: inline-block; margin-top: .08em; }
+.ce-feature-copy > p:not(.ce-eyebrow) { max-width: 350px; margin: 26px 0 26px; color: var(--ce-muted); font: 400 12px/1.8 Inter, sans-serif; }
+.ce-text-link { display: inline-flex; min-height: 42px; align-items: center; gap: 12px; border-bottom: 1px solid var(--ce-gold); color: var(--ce-wine); font: 600 9px/1.4 Inter, sans-serif; letter-spacing: .12em; text-decoration: none; }
+.ce-text-link svg { transition: transform .25s ease; }
+.ce-text-link:hover svg { transform: translateX(5px); }
+.ce-feature-ornament { position: absolute; right: -12px; bottom: -54px; color: rgba(212,175,98,.16); font: 400 clamp(160px, 23vw, 310px)/.8 "Cormorant Garamond", Georgia, serif; pointer-events: none; }
+
+.ce-events { padding: clamp(70px, 9vw, 116px) 0 clamp(80px, 10vw, 132px); background: #F0E9DE; }
+.ce-events-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 52px; }
+.ce-events-heading .ce-eyebrow { margin-bottom: 17px; }
+.ce-events-heading h2 { margin: 0; color: var(--ce-wine); font: 400 clamp(44px, 5.5vw, 74px)/.88 "Cormorant Garamond", Georgia, serif; letter-spacing: -.04em; }
+.ce-events-heading > p { margin: 0 4vw 4px 0; color: var(--ce-muted); font: 400 13px/1.7 Inter, sans-serif; }
+.ce-event-grid { display: flex; gap: clamp(14px, 1.5vw, 22px); overflow-x: auto; overscroll-behavior-inline: contain; padding: 4px 2px 12px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.ce-event-grid::-webkit-scrollbar { display: none; }
+.ce-event { flex: 0 0 clamp(260px, 31vw, 420px); min-width: 0; overflow: hidden; border: 1px solid rgba(154,117,57,.34); padding: 6px; background: rgba(248,243,234,.7); scroll-snap-align: start; transform-origin: center bottom; transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .35s ease; }
+.ce-event-photo { position: relative; overflow: hidden; background: #d5c8ba; }
+.ce-event-photo { aspect-ratio: 1.12 / 1; }
+.ce-event-photo::after { position: absolute; inset: 0; content: ''; background: rgba(31,10,18,0); transition: background-color .4s ease; pointer-events: none; }
+.ce-event-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .75s cubic-bezier(.2,.7,.2,1); }
+.ce-event:nth-child(4n + 2) .ce-event-photo img { object-position: center 42%; }
+.ce-event-number { position: absolute; z-index: 1; top: 17px; left: 18px; color: #fff; font: 500 9px/1.4 Inter, sans-serif; letter-spacing: .15em; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+.ce-event-open { position: absolute; z-index: 1; right: 17px; bottom: 17px; display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; color: white; opacity: .85; transition: transform .35s ease, color .35s ease, background-color .35s ease; }
+.ce-event-caption { padding: 17px 2px 0; }
+.ce-event-caption .ce-eyebrow { font-size: 8px; }
+.ce-event-caption h3 { margin: 9px 0 5px; color: var(--ce-wine); font: 400 clamp(24px, 2.8vw, 34px)/1.08 "Cormorant Garamond", Georgia, serif; }
+.ce-event-caption > p:last-child { max-width: 440px; margin: 0; color: #716762; font: 400 11px/1.75 Inter, sans-serif; }
+@media (hover: hover) and (pointer: fine) {
+  .ce-event:hover { transform: translateY(-6px); border-color: var(--ce-gold); }
+  .ce-event:hover .ce-event-photo img { transform: scale(1.055); }
+  .ce-event:hover .ce-event-photo::after { background: rgba(31,10,18,.16); }
+  .ce-event:hover .ce-event-open { transform: translateX(4px); border-color: var(--ce-gold); color: var(--ce-wine); background: var(--ce-gold); }
+}
+
+.ce-marquee { overflow: hidden; padding: 21px 0; color: var(--ce-ivory); background: var(--ce-wine); }
+.ce-marquee-track { display: flex; width: max-content; animation: ce-marquee 34s linear infinite; }
+.ce-marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: clamp(20px, 4vw, 54px); padding-right: clamp(20px, 4vw, 54px); font: 500 9px/1.4 Inter, sans-serif; letter-spacing: .2em; white-space: nowrap; }
+.ce-marquee-group i { color: var(--ce-gold); font: normal 12px/1 Georgia, serif; }
+.ce-marquee:hover .ce-marquee-track { animation-play-state: paused; }
+@keyframes ce-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.ce-career { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(50px, 8vw, 112px); align-items: start; padding-block: clamp(85px, 11vw, 145px); }
+.ce-career-heading .ce-eyebrow { margin-bottom: 18px; }
+.ce-career-heading h2 { margin: 0; color: var(--ce-wine); font: 400 clamp(40px, 4.7vw, 62px)/.91 "Cormorant Garamond", Georgia, serif; letter-spacing: -.035em; }
+.ce-career-heading > p:last-child { max-width: 430px; margin: 22px 0 0; color: var(--ce-muted); font: 400 12px/1.85 Inter, sans-serif; }
+.ce-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 3px; }
+.ce-principle { min-width: 0; border-left: 1px solid rgba(154,117,57,.48); padding: 0 clamp(13px, 2vw, 26px); }
+.ce-principle > span { color: #9A7539; font: 400 13px/1.4 Inter, sans-serif; letter-spacing: .08em; }
+.ce-principle h3 { margin: 30px 0 12px; color: var(--ce-wine); font: 600 9px/1.5 Inter, sans-serif; letter-spacing: .12em; }
+.ce-principle p { margin: 0; color: #716762; font: 400 11px/1.8 Inter, sans-serif; }
+
+.ce-cta { position: relative; isolation: isolate; min-height: 555px; overflow: hidden; padding: clamp(72px, 9vw, 118px) max(32px, calc((100vw - 1320px)/2)); color: var(--ce-ivory); background: var(--ce-wine); }
+.ce-cta-image { position: absolute; z-index: -2; inset: -5% 0; width: 100%; height: 110%; object-fit: cover; object-position: center; opacity: .2; filter: grayscale(1); }
+.ce-cta::before { position: absolute; z-index: -1; inset: 0; content: ''; background: linear-gradient(90deg, rgba(42,7,24,.96), rgba(42,7,24,.82) 62%, rgba(42,7,24,.67)); }
+.ce-cta-content { max-width: 780px; }
+.ce-cta .ce-eyebrow { margin-bottom: 20px; color: var(--ce-gold); }
+.ce-cta h2 { margin: 0; color: var(--ce-ivory); font: 400 clamp(53px, 7.6vw, 101px)/.82 "Cormorant Garamond", Georgia, serif; letter-spacing: -.045em; }
+.ce-cta h2 em { color: var(--ce-gold); }
+.ce-cta-content > p:not(.ce-eyebrow) { max-width: 430px; margin: 24px 0; color: rgba(248,243,234,.72); font: 400 12px/1.8 Inter, sans-serif; }
+.ce-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.ce-button--gold { border: 1px solid var(--ce-gold); color: var(--ce-wine); background: var(--ce-gold); }
+.ce-button--gold:hover { background: #E6CB8C; }
+.ce-button--outline { border: 1px solid rgba(248,243,234,.5); color: var(--ce-ivory); }
+.ce-button--outline:hover { border-color: var(--ce-gold); color: var(--ce-gold); }
+.ce-cta-seal { position: absolute; right: max(5vw, calc((100vw - 1380px)/2)); bottom: 36px; display: block; width: 122px; height: 122px; border-radius: 50%; object-fit: contain; }
+
+@media (max-width: 900px) {
+  .ce-wrap, .ce-hero-copy { width: calc(100% - 48px); }
+  .ce-hero { min-height: 82vh; min-height: 82svh; }
+  .ce-hero-title { font-size: clamp(76px, 12vw, 112px); }
+  .ce-intro { gap: 42px; }
+  .ce-feature { gap: 48px; }
+  .ce-career { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 767px) {
+  .ce-wrap, .ce-hero-copy { width: calc(100% - 40px); }
+  .ce-hero { min-height: 82vh; min-height: 82svh; align-items: center; }
+  .ce-hero-image { object-position: 76% center; }
+  .ce-hero-shade { background: linear-gradient(0deg, rgba(25,7,15,.95) 0%, rgba(31,9,18,.72) 46%, rgba(27,11,15,.12) 100%); }
+  .ce-hero-copy { margin: 0 auto; padding: 42px 0 30px; }
+  .ce-hero-eyebrow { margin-bottom: 18px; font-size: 8px; }
+  .ce-hero-title { font-size: clamp(56px, 13vw, 82px); line-height: .82; }
+  .ce-hero-title span:last-child { margin-left: .32em; }
+  .ce-hero-deck { max-width: 335px; margin-top: 20px; font-size: clamp(23px, 6.2vw, 30px); }
+  .ce-desktop-break { display: none; }
+  .ce-hero-description { max-width: 360px; margin: 9px 0 16px; font-size: 11px; line-height: 1.7; }
+  .ce-button { min-height: 48px; padding-inline: 16px; font-size: 8px; }
+  .ce-locations { margin-top: 22px; }
+  .ce-scroll-cue { right: 20px; bottom: 20px; width: 36px; height: 36px; }
+  .ce-hero-index { display: none; }
+  .ce-intro { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 72px; }
+  .ce-intro-heading h2 { font-size: clamp(52px, 13vw, 70px); }
+  .ce-intro-rule { width: 62px; height: 1px; transform: none; }
+  .ce-intro-copy { padding-top: 36px; }
+  .ce-intro-copy > p { font-size: 13px; line-height: 1.8; }
+  .ce-mark { top: -21px; font-size: 72px; }
+  .ce-feature { grid-template-columns: 1fr; gap: 31px; padding-bottom: 76px; }
+  .ce-feature-photo { aspect-ratio: 1.15 / 1; }
+  .ce-feature-copy { padding: 0; }
+  .ce-feature-copy h2 { font-size: clamp(48px, 12vw, 65px); }
+  .ce-feature-copy > p:not(.ce-eyebrow) { margin: 17px 0 15px; }
+  .ce-feature-ornament { right: -10px; bottom: -25px; font-size: 170px; }
+  .ce-events { padding-block: 69px 76px; }
+  .ce-events-heading { align-items: start; flex-direction: column; gap: 14px; margin-bottom: 31px; }
+  .ce-events-heading h2 { font-size: clamp(48px, 11vw, 64px); }
+  .ce-events-heading > p { margin: 0; font-size: 12px; }
+  .ce-event-grid { gap: 13px; margin-right: -20px; padding-right: 20px; }
+  .ce-event { flex-basis: min(82vw, 360px); }
+  .ce-event-photo { aspect-ratio: 1 / 1.08; }
+  .ce-event-caption { padding-top: 13px; }
+  .ce-event-caption h3 { font-size: 29px; }
+  .ce-event-caption > p:last-child { font-size: 11px; }
+  .ce-marquee { padding-block: 17px; }
+  .ce-marquee-track { animation-duration: 42s; }
+  .ce-marquee-group { gap: 18px; font-size: 8px; }
+  .ce-career { gap: 31px; padding-block: 74px; }
+  .ce-career-heading h2 { font-size: clamp(42px, 10vw, 57px); }
+  .ce-career-heading > p:last-child { margin-top: 15px; }
+  .ce-principles { grid-template-columns: 1fr; }
+  .ce-principle { display: grid; grid-template-columns: 37px 1fr; column-gap: 10px; border-top: 1px solid rgba(154,117,57,.35); border-left: 0; padding: 17px 0 19px; }
+  .ce-principle > span { grid-row: span 2; }
+  .ce-principle h3 { margin: 1px 0 7px; }
+  .ce-principle p { font-size: 11px; }
+  .ce-cta { min-height: 0; padding: 72px 20px 86px; }
+  .ce-cta h2 { font-size: clamp(56px, 13vw, 82px); }
+  .ce-cta-content > p:not(.ce-eyebrow) { margin: 18px 0 20px; }
+  .ce-cta-actions { align-items: stretch; flex-direction: column; }
+  .ce-cta-actions .ce-button { width: 100%; }
+  .ce-cta-seal { right: 19px; bottom: 18px; width: 60px; height: 60px; opacity: .82; }
+}
+@media (max-width: 360px) {
+  .ce-wrap, .ce-hero-copy { width: calc(100% - 34px); }
+  .ce-hero-title { font-size: 54px; }
+  .ce-hero-copy { padding: 38px 0 26px; }
+  .ce-cta { padding-inline: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ce-event-photo img, .ce-event-photo::after, .ce-event-open, .ce-button, .ce-text-link svg { transition: none !important; }
+  .ce-hero-image { transform: none !important; }
+}
